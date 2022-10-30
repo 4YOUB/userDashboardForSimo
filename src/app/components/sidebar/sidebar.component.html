@@ -1,0 +1,31 @@
+<div class="absolute right-0 z-10 md:hidden cursor-pointer " (click)="toggleNavbar(sidebar,show,close)">
+    <svg #show class="" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5.16666" width="7.5" height="7.75" rx="1" stroke="#33363F" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="5" y="18.0833" width="7.5" height="7.75" rx="1" stroke="#33363F" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="17.5" y="18.0833" width="7.5" height="7.75" rx="1" stroke="#33363F" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="17.5" y="5.16666" width="7.5" height="7.75" rx="1" stroke="#33363F" stroke-width="2" stroke-linejoin="round"/>
+    </svg> 
+    <svg #close class="hidden" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.8666 27.4896H12.1333C10.9466 27.4896 9.42662 26.9216 8.59996 26.1604L3.1333 21.2062C2.2933 20.445 1.66663 19.0675 1.66663 18.0041V10.9958C1.66663 9.92041 2.2933 8.54292 3.1333 7.79375L8.59996 2.83958C9.43996 2.07833 10.96 1.51041 12.1333 1.51041H19.8666C21.0533 1.51041 22.5733 2.07833 23.4 2.83958L28.8666 7.79375C29.7066 8.555 30.3333 9.9325 30.3333 10.9958V18.0041C30.3333 19.0796 29.7066 20.4571 28.8666 21.2062L23.4 26.1604C22.56 26.9216 21.0533 27.4896 19.8666 27.4896ZM12.1333 3.32291C11.48 3.32291 10.4666 3.69749 10.0133 4.12041L4.54663 9.07459C4.0933 9.4975 3.66663 10.4037 3.66663 10.9958V18.0041C3.66663 18.5962 4.07996 19.5146 4.54663 19.9254L10.0133 24.8796C10.48 25.2904 11.48 25.6771 12.1333 25.6771H19.8666C20.52 25.6771 21.5333 25.3025 21.9866 24.8796L27.4533 19.9254C27.9066 19.5025 28.3333 18.5962 28.3333 18.0041V10.9958C28.3333 10.4037 27.92 9.48542 27.4533 9.07459L21.9866 4.12041C21.52 3.70958 20.52 3.32291 19.8666 3.32291H12.1333Z" fill="#292D32"/>
+        <path d="M11.3332 19.6354C11.0799 19.6354 10.8265 19.5508 10.6265 19.3696C10.2399 19.0192 10.2399 18.4392 10.6265 18.0888L19.9599 9.63043C20.3465 9.28001 20.9865 9.28001 21.3732 9.63043C21.7599 9.98084 21.7599 10.5608 21.3732 10.9113L12.0399 19.3696C11.8399 19.5508 11.5865 19.6354 11.3332 19.6354Z" fill="#292D32"/>
+        <path d="M20.6665 19.6354C20.4132 19.6354 20.1599 19.5508 19.9599 19.3696L10.6265 10.9113C10.2399 10.5608 10.2399 9.98084 10.6265 9.63043C11.0132 9.28001 11.6532 9.28001 12.0399 9.63043L21.3732 18.0888C21.7599 18.4392 21.7599 19.0192 21.3732 19.3696C21.1732 19.5508 20.9199 19.6354 20.6665 19.6354Z" fill="#292D32"/>
+    </svg>
+</div>
+
+<div #sidebar class="w-full transition duration-300 ease-in-out h-full flex min-w-[300px] max-w-[350px] md:translate-x-0 translate-x-[-100%] items-center flex-col gap-[100px] ">
+    <div class="user flex justify-center items-center flex-col p-[30px]">
+        <svg width="140" height="130" viewBox="0 0 100 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="38.3333" rx="12.5" ry="11.5" stroke="#222222" stroke-linecap="round"/>
+            <ellipse cx="50" cy="46" rx="37.5" ry="34.5" stroke="#222222"/>
+            <path d="M75 71.706C73.5254 67.6305 70.276 64.0292 65.7559 61.4607C61.2358 58.8922 55.6975 57.5 50 57.5C44.3025 57.5 38.7642 58.8922 34.2441 61.4607C29.724 64.0292 26.4746 67.6305 25 71.706" stroke="#222222" stroke-linecap="round"/>
+        </svg>
+        <label>Username</label>
+    </div>
+    <div class="links w-full flex flex-col items-center">
+        <a routerLink="/" class="w-full max-w-[350px] bg-[#FFD333] py-[10px] text-center border border-black">Profile</a>
+        <a routerLink="/commandes" class="w-full max-w-[350px] bg-[#FFD333] py-[10px] text-center border border-black">Commands</a>
+        <a href="#" class="w-full max-w-[350px] bg-[#FFD333] py-[10px] text-center border border-black">My Favorites</a>
+        <a href="#" class="w-full max-w-[350px] bg-[#FFD333] py-[10px] text-center border border-black">Special Offer</a>
+        <a href="#" class="w-full max-w-[350px] bg-[#FFD333] py-[10px] text-center border border-black">Products </a>
+    </div>
+</div>
