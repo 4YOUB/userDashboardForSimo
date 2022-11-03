@@ -9,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CommandesComponent } from './pages/commandes/commandes.component';
+import { CommandeComponent } from './components/commande/commande.component';
+import { FormsModule } from '@angular/forms';
+import { UserauthComponent } from './pages/userauth/userauth.component';
 
 
 
@@ -18,13 +21,16 @@ import { CommandesComponent } from './pages/commandes/commandes.component';
     SidebarComponent,
     ProfileComponent,
     CommandesComponent,
+    CommandeComponent,
+    UserauthComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

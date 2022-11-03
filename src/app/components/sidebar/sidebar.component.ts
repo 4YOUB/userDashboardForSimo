@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDataService } from 'src/app/shared/user-data.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService:UserDataService) 
+  {
 
+  }
+
+  user:any = {}
 
   toggleNavbar(elem:HTMLElement,show:HTMLElement,close:HTMLElement){
     document.body.querySelector('app-sidebar')?.classList.toggle('translate-x-[-90%]')
@@ -18,7 +23,8 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.userService.getUserData().then(data => this.user = data)
   }
 
 }
